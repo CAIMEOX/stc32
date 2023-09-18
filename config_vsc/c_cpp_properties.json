@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/../../Libraries/deivers/**",
+                "${workspaceFolder}/../../Libraries/boards/**",
+                "${workspaceFolder}/../../Libraries/startup/**",
+                "C:\\Keil_v5\\C251\\INC\\**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "interrupt=",
+                "sbit=char"
+            ],
+            "intelliSenseMode": "msvc-x64",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}

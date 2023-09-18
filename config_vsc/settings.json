@@ -1,0 +1,9 @@
+{
+  "files.encoding": "gbk",
+  "files.associations": {
+    "common.h": "c",
+    "main.h": "c"
+  },
+  "editor.formatOnSave": true,
+  "C_Cpp.default.compilerPath": "C:\\MinGW\\bin\\gcc.exe"
+}
