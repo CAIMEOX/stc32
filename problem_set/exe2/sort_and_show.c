@@ -17,14 +17,13 @@ uint8_t numbers[10][8] = {
 int i, j, k, temp;
 int Pins[4][2] = { {5,3}, {5,0}, {6,1}, {6,3} };
 int target_number = 1435;
-int numCount, digit; // For ex_digits
-uint8_t arr[4] = { 0, 0, 0, 0 };
+int numCount; // For ex_digits
+uint8_t arr[4];
 
 void ex_digits(int num) {
     numCount = 0;
     while (num != 0) {
-        digit = num % 10;
-        arr[3 - numCount] = digit;
+        arr[3 - numCount] = num % 10;
         numCount++;
         num /= 10;
     }
@@ -34,7 +33,7 @@ void bubble_sort() {
     map(0, 2, i,
         map(0, 2 - i, j, {
             if (arr[j] > arr[j + 1]) { swap(arr[j], arr[j + 1]); }
-        }))
+    }))
 }
 
 void setup() {
@@ -43,7 +42,7 @@ void setup() {
     map(0, 3, i, {
         GPIO_Toggle_Bit(Pins[i][0], 1 << Pins[i][1]);
         GPIO_Init(7, 1 << i, GPIO_OUT_PP);
-        });
+    });
 }
 
 void show_numbers() {
@@ -52,7 +51,7 @@ void show_numbers() {
             open(i);
             map(0, 7, j, GPIO_Write_Bit(7, 1 << j, numbers[arr[i]][j]));
             Ms_Delay(1);
-            });
+        });
     }
 }
 

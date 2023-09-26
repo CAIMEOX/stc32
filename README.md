@@ -55,7 +55,8 @@ This directory contains the solutions of some problems.
   - Level 2 : `control_loop.c`
   - Level 3 : `any_loop.c`
 - Exercise 2
-  - Level 4 : `main.c`
+  - Level 3 : `self_inc.c`
+  - Level 4 : `sort_and_show.c`
 
 
 ## LICENSE
