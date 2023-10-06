@@ -40,6 +40,15 @@ Open the directory as follows
 
 You should contain the folder `Libraries` in directory `../..`  .
 
+**Fix the interrupt error**:
+
+Add this marco at file head (after `STCxx.h`) to define the interrupt vector
+```c
+#if !defined(__C251__) && !defined(__C51__) && defined(__VSCODE)
+#include "./debug/debug.h"
+#endif
+```
+
 #### Compile
 
 Open file `MDK/TargetName.BAT` and click **Run Batch File** and you can see the output message

@@ -12,6 +12,7 @@
             "defines": [
                 "_DEBUG",
                 "UNICODE",
+                "__VSCODE",
                 "_UNICODE",
                 "interrupt=",
                 "sbit=char"
